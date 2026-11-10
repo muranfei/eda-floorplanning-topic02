@@ -1,0 +1,49 @@
+{
+  "slug": "floorplanning-topic-03",
+  "title": {
+    "en": "Area, Density, and Deadspace",
+    "zh": "面积、密度与空白率"
+  },
+  "source": "https://example.edu/course/topic-03",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "target_seconds": 230,
+    "languages": ["en", "zh"],
+    "subtitles": "bilingual"
+  },
+  "voices": {
+    "english_narrator": "en-US-AvaMultilingualNeural",
+    "english_mascot": "en-US-EmmaMultilingualNeural",
+    "chinese_narrator": "zh-CN-XiaoxiaoNeural",
+    "chinese_mascot": "zh-CN-YunxiaNeural"
+  },
+  "rendering": {
+    "style": "warm-paper-grid-module",
+    "background_music": "original-light-instrumental",
+    "music_target_lufs": -27,
+    "final_target_lufs": -14
+  },
+  "scenes": [
+    {
+      "id": "01",
+      "title_en": "Area analogy",
+      "title_zh": "面积类比",
+      "start": 0,
+      "duration": 12,
+      "visual": "Describe the scene-local animation."
+    }
+  ],
+  "website": {
+    "concepts": 6,
+    "exercises": 5,
+    "playback_speeds": [0.75, 1, 1.25, 1.5, 2],
+    "ppt_download": true
+  },
+  "presentation": {
+    "slides": 8,
+    "languages": ["en", "zh"],
+    "editable": true
+  }
+}

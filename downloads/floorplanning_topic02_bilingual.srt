@@ -1,0 +1,334 @@
+1
+00:00:00,080 --> 00:00:03,433
+Ever tried to zip a carry-on after buying too many souvenirs?
+买纪念品买多了，你有没有试过硬塞登机箱？
+
+2
+00:00:03,553 --> 00:00:07,854
+You can rearrange, squeeze, or sit on it. But the suitcase refuses to grow.
+你可以重新摆、用力压，甚至坐上去，但箱子就是不会变大。
+
+3
+00:00:07,974 --> 00:00:10,300
+Floorplanning starts with the same kind of problem.
+芯片布局规划，本质上就是同一类问题。
+
+4
+00:00:10,840 --> 00:00:12,963
+Shrink the suitcase onto a chip.
+把登机箱缩小到芯片上。
+
+5
+00:00:13,083 --> 00:00:17,824
+The fixed chip outline is the bag. The circuit modules are the items.
+固定轮廓就是箱子，电路模块就是行李。
+
+6
+00:00:17,944 --> 00:00:21,937
+After clustering and partitioning, floorplanning decides where each module physically goes.
+完成聚类和划分后，布局规划决定每个模块放在哪里。
+
+7
+00:00:22,057 --> 00:00:24,100
+Same packing rules. Much less space.
+规则一样，空间更小。
+
+8
+00:00:24,640 --> 00:00:28,210
+A legal floorplan must pass two checks.
+合法布局必须通过两项检查。
+
+9
+00:00:28,330 --> 00:00:31,374
+Every module stays inside the outline.
+所有模块都必须位于轮廓内。
+
+10
+00:00:31,494 --> 00:00:35,591
+No pair may have a positive-area interior overlap.
+任意两个模块都不能有正面积内部重叠。
+
+11
+00:00:35,711 --> 00:00:37,620
+Both checks must pass.
+两项都通过，布局才合法。
+
+12
+00:00:38,160 --> 00:00:42,189
+Our teaching instance is ten units wide by eight units tall.
+本课实例宽10、高8。
+
+13
+00:00:42,309 --> 00:00:48,977
+Five modules must fit: A is 3×2, B is 2×3, C and E are 2×2, D is 3×1.
+需要放入5个模块：A为3×2，B为2×3，C和E为2×2，D为3×1。
+
+14
+00:00:49,097 --> 00:00:51,160
+Coordinates start at the lower-left corner.
+坐标从左下角开始。
+
+15
+00:00:51,700 --> 00:00:53,224
+Start with a bad packing.
+先看一个错误布局。
+
+16
+00:00:53,344 --> 00:00:57,168
+E starts at x equals nine, and it is two units wide.
+E从x=9开始，宽度为2。
+
+17
+00:00:57,288 --> 00:01:00,784
+Its right edge reaches eleven, but the outline ends at ten.
+它的右边界到11，而轮廓只到10。
+
+18
+00:01:00,904 --> 00:01:04,320
+The suitcase does not stretch. E is outside, so legality fails.
+箱子不会拉伸，E跑到外面，因此合法性失败。
+
+19
+00:01:04,860 --> 00:01:07,295
+Quick check. Where does E end?
+快速检查：E的右边界到哪里？
+
+20
+00:01:07,415 --> 00:01:10,275
+Ten, eleven, or does it still fit?
+是10、11，还是仍然能放进去？
+
+21
+00:01:10,395 --> 00:01:12,750
+Three. Two. One. Make your choice.
+三、二、一，请作答。
+
+22
+00:01:14,070 --> 00:01:16,234
+The right edge is eleven, not ten.
+右边界是11，不是10。
+
+23
+00:01:16,354 --> 00:01:18,518
+E hangs one unit outside the outline.
+E有一格悬在轮廓外。
+
+24
+00:01:18,638 --> 00:01:19,823
+Answer B: containment failure.
+答案是B：包含性失败。
+
+25
+00:01:19,943 --> 00:01:22,680
+The rest of the layout does not matter yet.
+此时其他布局因素都还不重要。
+
+26
+00:01:23,220 --> 00:01:26,649
+Place a coffee cup on top of a laptop.
+把咖啡杯放在笔记本电脑上。
+
+27
+00:01:26,769 --> 00:01:31,382
+Two objects occupy the same footprint. On a chip, that is illegal.
+两件物品占用了同一块位置，这在芯片里是非法的。
+
+28
+00:01:31,502 --> 00:01:35,640
+Here, E sits on C, so the checker reports an overlap.
+这里E压在C上，检查器报告内部重叠。
+
+29
+00:01:36,180 --> 00:01:38,434
+Think of two books side by side.
+想想两本并排的书。
+
+30
+00:01:38,554 --> 00:01:41,827
+They can touch at their covers without sharing page area.
+书皮可以接触，但不会共享页面面积。
+
+31
+00:01:41,947 --> 00:01:46,576
+Modules may share an edge. The contact has zero area, so it is legal.
+模块也可以共享一条边；接触面积为零，所以合法。
+
+32
+00:01:46,696 --> 00:01:48,870
+Stacking one block on another is not.
+但把一个块压在另一个上就不行。
+
+33
+00:01:49,410 --> 00:01:50,592
+Which packing passes?
+哪一种布局合法？
+
+34
+00:01:50,712 --> 00:01:57,538
+A: E escapes. B: E sits on C. C: C and E sit side by side.
+A：E跑出轮廓；B：E压在C上；C：C和E并排接触。
+
+35
+00:01:57,658 --> 00:01:58,760
+Three. Two. One.
+三、二、一。
+
+36
+00:02:00,280 --> 00:02:01,636
+The answer is C.
+答案是C。
+
+37
+00:02:01,756 --> 00:02:04,589
+Edge contact has zero area, so it passes.
+边缘接触面积为零，所以通过。
+
+38
+00:02:04,709 --> 00:02:06,803
+A fails containment. B fails overlap.
+A违反包含性，B违反不重叠规则。
+
+39
+00:02:06,923 --> 00:02:11,890
+The bag closes only when every block is inside and no interiors are shared.
+只有全部模块在内且内部不重叠，箱子才能真正合上。
+
+40
+00:02:12,430 --> 00:02:14,148
+Here is the golden packing.
+这是标准合法布局。
+
+41
+00:02:14,268 --> 00:02:20,398
+A is at the origin. D is above A. B, C, and E run along the bottom.
+A在原点，D在A上方，B、C、E沿底部排列。
+
+42
+00:02:20,518 --> 00:02:23,707
+Every module is inside 10×8, with no interior overlap.
+所有模块都在10×8轮廓内，内部互不重叠。
+
+43
+00:02:23,827 --> 00:02:26,200
+The suitcase closes, and legality is true.
+箱子合上了，合法性为true。
+
+44
+00:02:26,740 --> 00:02:31,831
+Weighing an open carry-on gives a number, but the bag is not packed.
+给还开着的登机箱称重会得到数字，但箱子并没有装好。
+
+45
+00:02:31,951 --> 00:02:34,237
+Chip metrics work the same way.
+芯片指标也是同样道理。
+
+46
+00:02:34,357 --> 00:02:39,047
+Illegal layouts can produce density or deadspace, but the score means nothing.
+非法布局也能算出密度或空白率，但结果没有意义。
+
+47
+00:02:39,167 --> 00:02:40,170
+Check legality first.
+先检查合法性。
+
+48
+00:02:40,710 --> 00:02:42,471
+ChipBot runs two loops.
+ChipBot执行两个循环。
+
+49
+00:02:42,591 --> 00:02:45,294
+First, check containment for every module.
+第一，检查每个模块是否都在轮廓内。
+
+50
+00:02:45,414 --> 00:02:49,057
+Then check every pair for positive-area interior overlap.
+第二，检查每一对模块是否有正面积内部重叠。
+
+51
+00:02:49,177 --> 00:02:53,210
+One failed check is enough to reject the pack.
+任何一项失败，布局都会被拒绝。
+
+52
+00:02:53,750 --> 00:02:55,461
+ChipBot sees three traps.
+ChipBot发现三个陷阱。
+
+53
+00:02:55,581 --> 00:02:58,665
+Off-by-one boundaries can misclassify a legal edge.
+边界差一会把合法情况判错。
+
+54
+00:02:58,785 --> 00:03:02,326
+A centre coordinate is not a lower-left rectangle.
+中心坐标不等同于左下角定义。
+
+55
+00:03:02,446 --> 00:03:05,450
+Touching is not overlapping. Check the geometry.
+接触不等于重叠，要检查几何关系。
+
+56
+00:03:05,990 --> 00:03:10,095
+C starts at x equals five and is two units wide.
+C从x=5开始，宽度为2。
+
+57
+00:03:10,215 --> 00:03:13,552
+Its right edge is seven. E starts at seven.
+C的右边界是7，E正好从7开始。
+
+58
+00:03:13,672 --> 00:03:17,778
+Do they overlap by two, overlap by one, or only touch?
+它们重叠2、重叠1，还是只接触？
+
+59
+00:03:17,898 --> 00:03:18,850
+Three. Two. One.
+三、二、一。
+
+60
+00:03:20,370 --> 00:03:21,349
+They only touch.
+它们只是接触。
+
+61
+00:03:21,469 --> 00:03:25,381
+C ends where E begins, so the contact has zero area.
+C结束的位置正好是E开始的位置，接触面积为零。
+
+62
+00:03:25,501 --> 00:03:28,679
+The answer is C, and the packing is legal.
+答案是C，布局合法。
+
+63
+00:03:28,799 --> 00:03:32,630
+If E began at six, they would overlap by one unit.
+如果E从6开始，它们就会重叠1格。
+
+64
+00:03:33,170 --> 00:03:36,149
+That is fixed-outline legality.
+这就是固定轮廓合法性。
+
+65
+00:03:36,269 --> 00:03:41,572
+Two rules: everything inside, no interior overlap.
+两条规则：全部在轮廓内，内部不重叠。
+
+66
+00:03:41,692 --> 00:03:45,446
+Fix legality before optimising anything.
+先保证合法，再优化其他指标。
+
+67
+00:03:45,566 --> 00:03:49,240
+Next: area, density, and deadspace.
+下一课：面积、密度和空白率。

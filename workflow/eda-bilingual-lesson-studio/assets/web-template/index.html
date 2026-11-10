@@ -1,0 +1,492 @@
+<!doctype html>
+<!--
+  Starter template for a bilingual EDA lesson.
+  Replace the topic copy, video sources, chapter timestamps, quiz data, poster,
+  and downloadable PPT path. Keep the language switch, video switch, speed
+  control, exercise scoring, and local-relative asset pattern.
+-->
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A bilingual Floorplanning Topic 02 lesson on fixed-outline constraints."
+    >
+    <title>Fixed-Outline Constraints | 固定轮廓约束</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">
+      <span class="en">Skip to lesson</span>
+      <span class="zh">跳到课程</span>
+    </a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="EDA Learning home">
+          <span class="brand-chip">EDA</span>
+          <span class="brand-copy">
+            <strong>LEARN FLOORPLANNING</strong>
+            <small>TOPIC 02 · FIXED OUTLINE</small>
+          </span>
+        </a>
+
+        <nav class="top-nav" aria-label="Page sections">
+          <a href="#lesson"><span class="en">Lesson film</span><span class="zh">教学视频</span></a>
+          <a href="#concepts"><span class="en">Concepts</span><span class="zh">概念</span></a>
+          <a href="#practice"><span class="en">Practice</span><span class="zh">练习</span></a>
+        </nav>
+
+        <div class="language-switch" role="group" aria-label="Language">
+          <button class="lang-button is-active" type="button" data-set-lang="en">EN</button>
+          <button class="lang-button" type="button" data-set-lang="zh">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="en">FLOORPLANNING · LESSON 02</span>
+            <span class="zh">芯片布局规划 · 第 02 课</span>
+          </div>
+
+          <h1>
+            <span class="en">FIXED-OUTLINE<br><mark>CONSTRAINTS</mark></span>
+            <span class="zh">固定轮廓<br><mark>合法性约束</mark></span>
+          </h1>
+
+          <p class="hero-lead">
+            <span class="en">
+              A legal floorplan is a space problem with two non-negotiable rules:
+              everything stays inside, and no interiors overlap.
+            </span>
+            <span class="zh">
+              合法布局本质上是一个空间问题，有两条不可妥协的规则：
+              所有模块都在轮廓内，任意两个模块的内部都不重叠。
+            </span>
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#lesson">
+              <span class="en">Watch the lesson</span>
+              <span class="zh">开始观看</span>
+              <span aria-hidden="true">↘</span>
+            </a>
+            <a class="secondary-button" href="#practice">
+              <span class="en">Try 5 quick checks</span>
+              <span class="zh">完成 5 道练习</span>
+            </a>
+          </div>
+
+          <ul class="hero-facts" aria-label="Lesson facts">
+            <li><strong>3:50</strong><span class="en">video</span><span class="zh">视频</span></li>
+            <li><strong>2</strong><span class="en">legality rules</span><span class="zh">条合法性规则</span></li>
+            <li><strong>EN / 中文</strong><span class="en">dual audio</span><span class="zh">双语言音轨</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-board" aria-hidden="true">
+          <div class="board-tape">10 × 8</div>
+          <div class="board-caption">
+            <span class="en">ONE OUTLINE. TWO RULES.</span>
+            <span class="zh">一个轮廓，两条规则。</span>
+          </div>
+          <div class="board-grid">
+            <div class="block block-a">A</div>
+            <div class="block block-d">D</div>
+            <div class="block block-b">B</div>
+            <div class="block block-c">C</div>
+            <div class="block block-e">E</div>
+          </div>
+          <div class="board-note">
+            <span class="check-dot">✓</span>
+            <span class="en">interiors stay separate</span>
+            <span class="zh">内部区域互不重叠</span>
+          </div>
+          <div class="hand-arrow">↗</div>
+        </div>
+      </section>
+
+      <section class="lesson-section shell" id="lesson">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">01 / <span class="en">WATCH</span><span class="zh">观看</span></span>
+            <h2><span class="en">THE PACKED SUITCASE TEST</span><span class="zh">“装箱”合法性测试</span></h2>
+          </div>
+          <p>
+            <span class="en">Choose the English or Chinese soundtrack below.</span>
+            <span class="zh">在播放器上方切换英文或中文配音。</span>
+          </p>
+        </div>
+
+        <div class="lesson-layout">
+          <div class="player-card">
+            <div class="player-topbar">
+              <div class="now-playing">
+                <span class="live-dot"></span>
+                <span class="en">NOW PLAYING</span>
+                <span class="zh">正在播放</span>
+              </div>
+              <div class="video-switch" role="group" aria-label="Video language">
+                <button class="video-tab is-active" type="button" data-video-lang="en">
+                  <span>EN</span>
+                  <small class="en">English narration</small>
+                  <small class="zh">英文旁白</small>
+                </button>
+                <button class="video-tab" type="button" data-video-lang="zh">
+                  <span>中文</span>
+                  <small class="en">Chinese narration</small>
+                  <small class="zh">中文旁白</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="video-stage">
+              <video
+                class="lesson-video is-current"
+                id="video-en"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/poster.jpg"
+              >
+                <source
+                  src="videos/lesson-en.mp4"
+                  type="video/mp4"
+                >
+              </video>
+              <video
+                class="lesson-video"
+                id="video-zh"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/poster.jpg"
+                hidden
+              >
+                <source
+                  src="videos/lesson-zh.mp4"
+                  type="video/mp4"
+                >
+              </video>
+            </div>
+
+            <div class="player-toolbar">
+              <div class="player-meta">
+                <span class="audio-badge">
+                  <span aria-hidden="true">◉</span>
+                  <span class="en">Dual voice + soft music</span>
+                  <span class="zh">双声线 + 轻音乐</span>
+                </span>
+                <span class="time-readout" id="time-readout">0:00 / 3:50</span>
+              </div>
+
+              <div class="speed-control">
+                <span class="speed-label">
+                  <span class="en">Playback speed</span>
+                  <span class="zh">播放速度</span>
+                </span>
+                <button
+                  class="speed-button"
+                  id="speed-button"
+                  type="button"
+                  aria-label="Change playback speed"
+                >
+                  <span id="speed-value">1×</span>
+                  <span class="speed-arrows" aria-hidden="true">›</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="download-row">
+              <a href="videos/lesson-en.mp4" download>
+                <span aria-hidden="true">↓</span>
+                <span class="en">Download English MP4</span>
+                <span class="zh">下载英文版 MP4</span>
+              </a>
+              <a href="videos/lesson-zh.mp4" download>
+                <span aria-hidden="true">↓</span>
+                <span class="en">Download Chinese MP4</span>
+                <span class="zh">下载中文版 MP4</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="chapter-card">
+            <div class="chapter-card-head">
+              <span class="chapter-icon">02</span>
+              <div>
+                <h3><span class="en">Lesson map</span><span class="zh">课程导航</span></h3>
+                <p><span class="en">Jump to a moment</span><span class="zh">跳到关键片段</span></p>
+              </div>
+            </div>
+            <div class="chapter-list">
+              <button type="button" data-seek="0">
+                <span>00:00</span>
+                <span class="en">The suitcase problem</span>
+                <span class="zh">登机箱难题</span>
+              </button>
+              <button type="button" data-seek="24.56">
+                <span>00:24</span>
+                <span class="en">The two legality checks</span>
+                <span class="zh">两项合法性检查</span>
+              </button>
+              <button type="button" data-seek="51.62">
+                <span>00:51</span>
+                <span class="en">Containment failure</span>
+                <span class="zh">包含性失败</span>
+              </button>
+              <button type="button" data-seek="83.14">
+                <span>01:23</span>
+                <span class="en">Overlap vs. contact</span>
+                <span class="zh">重叠与接触</span>
+              </button>
+              <button type="button" data-seek="132.35">
+                <span>02:12</span>
+                <span class="en">Golden packing</span>
+                <span class="zh">标准合法布局</span>
+              </button>
+              <button type="button" data-seek="213.09">
+                <span>03:33</span>
+                <span class="en">Legality recap</span>
+                <span class="zh">合法性总结</span>
+              </button>
+            </div>
+            <div class="chapter-rule">
+              <strong class="en">ONE FAILURE = REJECT</strong>
+              <strong class="zh">任何一项失败 = 拒绝</strong>
+              <span class="en">Legality is a gate, not a score.</span>
+              <span class="zh">合法性是门槛，不是评分。</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="resource-download">
+          <div class="resource-copy">
+            <span class="resource-kicker">DOWNLOADABLE / 可下载资料</span>
+            <h3>
+              <span class="en">Bilingual lesson deck</span>
+              <span class="zh">双语课程 PPT</span>
+            </h3>
+            <p>
+              <span class="en">
+                An editable 8-slide deck covering the packing model, both legality rules,
+                geometric examples, the checker procedure, and the metrics gate.
+              </span>
+              <span class="zh">
+                8 页可编辑演示文稿，涵盖装箱类比、两项合法性规则、几何示例、
+                检查流程和指标计算门槛。
+              </span>
+            </p>
+          </div>
+          <a
+            class="ppt-download-button"
+            href="downloads/lesson-deck.pptx"
+            download
+          >
+            <span class="ppt-file-mark">PPT</span>
+            <span class="ppt-button-copy">
+              <strong><span class="en">Download PowerPoint</span><span class="zh">下载 PowerPoint</span></strong>
+              <small><span class="en">8 slides · Bilingual · Editable</span><span class="zh">8 页 · 中英双语 · 可编辑</span></small>
+            </span>
+            <span class="ppt-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="concepts-section shell" id="concepts">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">02 / <span class="en">CONCEPTS</span><span class="zh">概念</span></span>
+            <h2><span class="en">BUILD THE LEGALITY GATE</span><span class="zh">搭建合法性关卡</span></h2>
+          </div>
+          <p>
+            <span class="en">Four ideas do most of the work.</span>
+            <span class="zh">掌握下面四个核心概念，就能判断绝大部分固定轮廓问题。</span>
+          </p>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card cyan-card">
+            <div class="concept-number">01</div>
+            <div class="concept-icon outline-icon" aria-hidden="true"><span></span></div>
+            <h3><span class="en">FIXED OUTLINE</span><span class="zh">固定轮廓</span></h3>
+            <p>
+              <span class="en">
+                The chip boundary is the suitcase. It cannot stretch to fit a module.
+              </span>
+              <span class="zh">
+                芯片边界就像登机箱，它不会为了容纳模块而变大。
+              </span>
+            </p>
+            <div class="formula">0 ≤ x and x + w ≤ W</div>
+          </article>
+
+          <article class="concept-card yellow-card">
+            <div class="concept-number">02</div>
+            <div class="concept-icon overlap-icon" aria-hidden="true"><i></i><i></i></div>
+            <h3><span class="en">POSITIVE-AREA OVERLAP</span><span class="zh">正面积内部重叠</span></h3>
+            <p>
+              <span class="en">
+                If two interiors share positive area, the layout is illegal.
+              </span>
+              <span class="zh">
+                如果两个模块的内部共享正面积，这个布局就是非法的。
+              </span>
+            </p>
+            <div class="formula">max(0, min(r₁,r₂) − max(l₁,l₂))</div>
+          </article>
+
+          <article class="concept-card lime-card">
+            <div class="concept-number">03</div>
+            <div class="concept-icon edge-icon" aria-hidden="true"><i></i><i></i></div>
+            <h3><span class="en">EDGE CONTACT IS LEGAL</span><span class="zh">边缘接触是合法的</span></h3>
+            <p>
+              <span class="en">
+                Touching at a boundary has zero contact area. Touching is not overlapping.
+              </span>
+              <span class="zh">
+                仅在边界接触时，接触面积为零。接触不等于重叠。
+              </span>
+            </p>
+            <div class="formula">C.right == E.left → legal</div>
+          </article>
+
+          <article class="concept-card coral-card">
+            <div class="concept-number">04</div>
+            <div class="concept-icon gate-icon" aria-hidden="true">✓</div>
+            <h3><span class="en">LEGALITY BEFORE METRICS</span><span class="zh">先合法，后指标</span></h3>
+            <p>
+              <span class="en">
+                Density and deadspace are meaningless until containment and overlap both pass.
+              </span>
+              <span class="zh">
+                只有包含性和不重叠都通过，密度和空白率才有意义。
+              </span>
+            </p>
+            <div class="formula">if legal: evaluate(area, density, deadspace)</div>
+          </article>
+        </div>
+
+        <div class="gate-banner">
+          <div class="gate-side">
+            <span class="gate-label"><span class="en">INPUT</span><span class="zh">输入</span></span>
+            <strong><span class="en">Every module inside?</span><span class="zh">所有模块都在轮廓内？</span></strong>
+          </div>
+          <div class="gate-arrow">→</div>
+          <div class="gate-side">
+            <span class="gate-label"><span class="en">CHECK</span><span class="zh">检查</span></span>
+            <strong><span class="en">Any positive-area overlap?</span><span class="zh">存在正面积内部重叠？</span></strong>
+          </div>
+          <div class="gate-arrow">→</div>
+          <div class="gate-side gate-output">
+            <span class="gate-label"><span class="en">OUTPUT</span><span class="zh">输出</span></span>
+            <strong><span class="en">PASS only if both are clear</span><span class="zh">两项都通过才算合法</span></strong>
+          </div>
+        </div>
+
+        <div class="glossary-row">
+          <span class="glossary-title"><span class="en">QUICK GLOSSARY</span><span class="zh">术语速查</span></span>
+          <dl>
+            <div>
+              <dt>Outline</dt>
+              <dd><span class="en">Fixed chip boundary</span><span class="zh">固定的芯片边界</span></dd>
+            </div>
+            <div>
+              <dt>Containment</dt>
+              <dd><span class="en">Every module remains inside</span><span class="zh">每个模块都留在边界内</span></dd>
+            </div>
+            <div>
+              <dt>Overlap</dt>
+              <dd><span class="en">Positive shared interior area</span><span class="zh">内部存在正面积交集</span></dd>
+            </div>
+            <div>
+              <dt>Deadspace</dt>
+              <dd><span class="en">Unused area inside the outline</span><span class="zh">轮廓内未被使用的面积</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="practice-section" id="practice">
+        <div class="shell">
+          <div class="section-heading light-heading">
+            <div>
+              <span class="section-kicker">03 / <span class="en">QUICK CHECK</span><span class="zh">快速检查</span></span>
+              <h2><span class="en">PACK IT WITHOUT BREAKING A RULE</span><span class="zh">在不违反规则的前提下完成布局</span></h2>
+            </div>
+            <p>
+              <span class="en">Answer all five. Explanations appear immediately.</span>
+              <span class="zh">完成五道题，提交后立即查看解析。</span>
+            </p>
+          </div>
+
+          <div class="practice-layout">
+            <div id="quiz-list" class="quiz-list"></div>
+
+            <aside class="score-card">
+              <span class="score-kicker"><span class="en">YOUR SCORE</span><span class="zh">当前得分</span></span>
+              <div class="score-ring">
+                <strong id="score-value">0</strong>
+                <span>/ 5</span>
+              </div>
+              <div class="score-track"><span id="score-progress"></span></div>
+              <p id="score-message">
+                <span class="en">Make a call, then check the geometry.</span>
+                <span class="zh">先做选择，再检查几何关系。</span>
+              </p>
+              <button class="reset-button" id="reset-quiz" type="button">
+                <span class="en">Reset all answers</span>
+                <span class="zh">重新作答</span>
+              </button>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="recap-section shell">
+        <div class="recap-card">
+          <span class="recap-stamp">TOPIC 02 · CLEAR</span>
+          <h2>
+            <span class="en">KEEP IT INSIDE.<br>KEEP IT APART.</span>
+            <span class="zh">保持在内。<br>保持分离。</span>
+          </h2>
+          <p>
+            <span class="en">
+              Once the legal gate is clear, the next lesson can safely measure area,
+              density, and deadspace.
+            </span>
+            <span class="zh">
+              只有通过合法性关卡，下一课的面积、密度和空白率计算才有意义。
+            </span>
+          </p>
+          <a href="#top" class="secondary-button">
+            <span class="en">Back to top</span>
+            <span class="zh">返回顶部</span>
+            <span aria-hidden="true">↑</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>
+          <span class="en">EDA Learning · Floorplanning Topic 02</span>
+          <span class="zh">EDA 学习平台 · 芯片布局规划第 02 课</span>
+        </p>
+        <a href="https://yongfu-li.github.io/eda-learning/courses/learn_floorplanning/index.html">
+          <span class="en">Original course material ↗</span>
+          <span class="zh">原始课程资料 ↗</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

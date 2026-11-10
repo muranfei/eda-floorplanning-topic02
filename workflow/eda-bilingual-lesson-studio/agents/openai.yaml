@@ -1,0 +1,5 @@
+interface:
+  display_name: "EDA Bilingual Lesson Studio"
+  short_description: "Build bilingual EDA videos, web lessons, and decks"
+  brand_color: "#22BFD7"
+  default_prompt: "Use $eda-bilingual-lesson-studio to create a bilingual EDA lesson with videos, a web page, exercises, and a downloadable deck."
